@@ -1,0 +1,15 @@
+ALTER TABLE metro_info ADD COLUMN m_no_of_passengers int;
+ALTER TABLE metro_info ADD COLUMN m_line VARCHAR(10),ADD COLUMN m_no_of_stops int; 
+DESC metro_info;
+ALTER TABLE metro_info ADD COLUMN m_number int;
+DESC metro_info;
+ALTER TABLE metro_info RENAME COLUMN m_line to m_metroline;
+ALTER TABLE metro_info RENAME COLUMN m_number to m_metronumber;
+SELECT * FROM metro_info;
+ALTER TABLE metro_info DROP COLUMN m_metroline,DROP COLUMN m_metronumber;
+SELECT * FROM metro_info;
+ALTER TABLE metro_info MODIFY COLUMN m_no_of_stops bigint;
+DESC metro_info;
+ALTER TABLE metro_info RENAME TO metro_details;
+ALTER TABLE metro_details RENAME TO metro_info;
+DESC metro_info;
